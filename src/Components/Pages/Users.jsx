@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UserCard from '../Molecules/UserCard'
+import UsersGrid from '../Organisms/UsersGrid'
 
 class Users extends Component {
   constructor(props) {
@@ -21,10 +21,8 @@ class Users extends Component {
     const { users } = this.state
     return (
       <>
-        <h1 className="text-2xl text-gray-700">Home</h1>
-        <section className="py-8 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          { users.map(user => <UserCard key={user.id} username={user.username} email={user.email} name={user.name} />) }
-        </section>
+        <h1 className="text-2xl text-gray-700">Usuarios</h1>
+        <UsersGrid users={users} />
       </>
     )
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CourseGrid from '../Organisms/CourseGrid'
+import CourseGrid from '../Organisms/CoursesGrid'
 
 export default class Courses extends Component {
 
@@ -23,15 +23,7 @@ export default class Courses extends Component {
     return (
       <>
         <h1 className="text-2xl font-bold text-gray-700">Courses</h1>
-        {
-          !courses.length ? (
-              <div className="flex justify-center">
-                <p className="shadow-md px-4 py-2 rounded-full text-xl bg-white max-w-sm text-orange-500">Cargando...</p>
-              </div>
-            ) : (
-              <CourseGrid courses={courses} />
-            )
-        }
+        <CourseGrid courses={courses} />
       </>
     )
   }

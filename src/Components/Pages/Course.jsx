@@ -20,16 +20,16 @@ export default class Course extends Component {
   }
 
   render() {
-    const currentCourse = this.state.course
+    const { course } = this.state
 
     return (
       <div className="min-h-screen flex justify-center items-center">
         <div className="max-w-md rounded shadow-md transform hover:-translate-y-2 duration-200 transition-transform bg-white">
-          <h1 className="text-blue-600 text-2xl p-4">{currentCourse.title}</h1>
+          <h1 className="text-blue-600 text-2xl p-4">{course.title}</h1>
 
-          <img className="w-full" src={currentCourse.image} alt={currentCourse.title} />
+          <img className="w-full" src={course.image} alt={course.title} />
 
-          <p className="text-gray-700 p-4">{currentCourse.description}</p>
+          <p className="text-gray-700 p-4">{course.description}</p>
         </div>
       </div>
     )
