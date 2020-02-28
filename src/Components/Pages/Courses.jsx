@@ -1,30 +1,18 @@
-import React, { Component } from 'react'
-import CourseGrid from '../Organisms/CoursesGrid'
+import React from 'react'
+import CoursesGrid from '../Organisms/CoursesGrid'
+import { connect } from 'react-redux'
 
-export default class Courses extends Component {
-
-  constructor(props) {
-    super(props)
-  
-    this.state = {
-      courses: []
-    }
-  }
-
-  async componentDidMount() {
-    const res = await fetch('http://localhost:3030/courses')
-    const courses = await res.json()
-
-    this.setState({ courses })
-  }
-  
-  render() {
-    const { courses } = this.state
-    return (
-      <>
-        <h1 className="text-2xl font-bold text-gray-700">Courses</h1>
-        <CourseGrid courses={courses} />
-      </>
-    )
-  }
+const Courses = ({ courses }) => {
+  return (
+    <>
+      <h1 className="text-2xl font-bold text-gray-700">Courses</h1>
+      <CoursesGrid courses={courses} />
+    </>
+  )
 }
+
+const mapStateToProps = state => ({
+  courses: state.coursesReducer.courses
+})
+
+export default connect(mapStateToProps, {})(Courses)

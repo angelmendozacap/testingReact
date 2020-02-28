@@ -4,43 +4,50 @@
       "id": 1,
       "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2020-01/ui_design.png",
       "title": "Diseño UI",
-      "description": "Aprende las técnicas y buenas prácticas para crear diseños de interfaces hermosos, funcionales e impactantes."
+      "description": "Aprende las técnicas y buenas prácticas para crear diseños de interfaces hermosos, funcionales e impactantes.",
+      "price": 10
     },
     {
       "id": 2,
       "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-10/figma-desde-cero-poster.png",
       "title": "Figma desde Cero",
-      "description": "Aprende la principal herramienta de diseño y prototipado colaborativo y en tiempo real del mercado."
+      "description": "Aprende la principal herramienta de diseño y prototipado colaborativo y en tiempo real del mercado.",
+      "price": 30
     },
     {
       "id": 3,
       "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-09/adobe-xd.png",
       "title": "Adobe XD desde Cero",
-      "description": "Aprende a diseñar interfaces de usuario interactivas e impactantes."
+      "description": "Aprende a diseñar interfaces de usuario interactivas e impactantes.",
+      "price": 25
     },
     {
       "id": 4,
       "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-10/Vue-JS.png",
       "title": "Vue.js desde Cero",
-      "description": "Vue es un framework progresivo de JavaScript que te da la flexibilidad necesaria para todo tipo de proyectos."
+      "description": "Vue es un framework progresivo de JavaScript que te da la flexibilidad necesaria para todo tipo de proyectos.",
+      "price": 100
     },
     {
       "id": 5,
       "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-08/angular.png",
       "title": "Angular desde Cero",
-      "description": "Aprende el framework frontend con más demanda del mercado."
+      "description": "Aprende el framework frontend con más demanda del mercado.",
+      "price": 15
     },
     {
       "id": 6,
       "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png",
       "title": "React.js desde Cero",
-      "description": "Programa tus aplicaciones web con la librería frontend que usa Facebook e Instagram."
+      "description": "Programa tus aplicaciones web con la librería frontend que usa Facebook e Instagram.",
+      "price": 24
     },
     {
       "id": 7,
       "image": "https://res.cloudinary.com/edteam/image/upload/v1581345777/courses/Go_desde_cero-v3.png",
       "title": "Go desde Cero",
-      "description": "Crea aplicaciones robustas y de alto rendimiento para cualquier sistema operativo con el lenguaje de Google."
+      "description": "Crea aplicaciones robustas y de alto rendimiento para cualquier sistema operativo con el lenguaje de Google.",
+      "price": 35
     }
   ]
 }

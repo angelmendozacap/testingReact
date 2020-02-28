@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
+import CartCounter from '../Atoms/CartCounter'
 
 export default class MainMenu extends Component {
   render() {
@@ -40,6 +41,7 @@ export default class MainMenu extends Component {
               </li>
             </ul>
           </nav>
+          <CartCounter />
         </div>
       </header>
     )
