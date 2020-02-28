@@ -1,6 +1,44 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import useCourse from '../CustomHooks/useCourse'
 
-export default class Course extends Component {
+const Course = ({ match }) => {
+
+  const courseId = match.params.id
+
+  const course = useCourse(courseId)
+  const [comment, setComment] = useState('Sin comentar')
+
+  function setMyComment(text) {
+    setComment(text)
+  }
+
+  return (
+    <div className="min-h-screen flex justify-center items-center">
+      <div>
+        <article className="max-w-md rounded shadow-md bg-white border-b border-gray-300 mb-2">
+          <h1 className="text-blue-600 text-2xl p-4">{course.title}</h1>
+
+          <img className="w-full" src={course.image} alt={course.title} />
+
+          <p className="text-gray-700 p-4">{course.description}</p>
+        </article>
+
+        <div>
+          <p className="mb-1">Escribe un comentario:</p>
+          <input
+            type="text" 
+            className="outline-none focus:shadow-outline block bg-gray-400 px-3 py-1 text-gray-900 rounded-full w-full"
+            onChange={(e) => { setMyComment(e.target.value) }}
+            placeholder="Comentario..."
+          />
+          <p>{comment}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* class CourseClass extends Component {
 
   constructor(props) {
     super(props)
@@ -34,4 +72,6 @@ export default class Course extends Component {
       </div>
     )
   }
-}
+} */
+
+export default Course

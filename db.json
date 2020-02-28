@@ -35,6 +35,12 @@
       "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2019-04/React%20desde%20cero%20%281%29.png",
       "title": "React.js desde Cero",
       "description": "Programa tus aplicaciones web con la librería frontend que usa Facebook e Instagram."
+    },
+    {
+      "id": 7,
+      "image": "https://res.cloudinary.com/edteam/image/upload/v1581345777/courses/Go_desde_cero-v3.png",
+      "title": "Go desde Cero",
+      "description": "Crea aplicaciones robustas y de alto rendimiento para cualquier sistema operativo con el lenguaje de Google."
     }
   ]
 }
