@@ -1,24 +1,17 @@
-import { createStore, combineReducers } from "redux"
-import { ADD_TO_CART, REMOVE_FROM_CART } from "./action"
+import { createStore, combineReducers, applyMiddleware } from "redux"
+import { ADD_TO_CART, REMOVE_FROM_CART, GET_COURSES_LIST } from "./action"
 import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from "redux-thunk"
 
 const initialStore = {
   cart: []
 }
 
 const initialCourses = {
-  courses: [
-    {
-      "id": 1,
-      "image": "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2020-01/ui_design.png",
-      "title": "Diseño UI",
-      "description": "Aprende las técnicas y buenas prácticas para crear diseños de interfaces hermosos, funcionales e impactantes.",
-      "price": 10
-    }
-  ]
+  courses: []
 }
 
-const rootReducer = (state = initialStore, { type, id }) => {
+const cartReducer = (state = initialStore, { type, id }) => {
   
   if (type === ADD_TO_CART) {
 
@@ -41,7 +34,14 @@ const rootReducer = (state = initialStore, { type, id }) => {
 }
 
 const coursesReducer = (state = initialCourses, action) => {
+  if (action.type === GET_COURSES_LIST) {
+    return {
+      ...state,
+      courses: action.courses
+    }
+  }
+
   return state
 }
 
-export default createStore(combineReducers({rootReducer, coursesReducer}), composeWithDevTools())
+export default createStore(combineReducers({cartReducer, coursesReducer}), composeWithDevTools(applyMiddleware(thunk)))

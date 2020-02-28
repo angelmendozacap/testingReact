@@ -16,6 +16,7 @@ class CourseGrid extends Component {
               title={course.title}
               description={course.description}
               id={course.id}
+              price={course.price}
               key={course.id}
             />
           ))
