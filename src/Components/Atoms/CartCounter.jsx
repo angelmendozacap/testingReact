@@ -13,7 +13,7 @@ const CartCounter = ({ cart }) => {
 
 const mapStateToProps = state => (
   {
-    cart: state.cart
+    cart: state.rootReducer.cart
   }
 )
 

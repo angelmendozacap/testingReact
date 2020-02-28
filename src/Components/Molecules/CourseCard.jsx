@@ -66,7 +66,7 @@ CourseCard.defaultProps = {
 
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.rootReducer.cart
 })
 
 const mapDispatchToProps = dispatch => ({
